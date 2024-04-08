@@ -1,0 +1,20 @@
+[
+    {
+        "id" : "1",
+        "title" : "Bug 1",
+        "description" : "Description 1",
+        "status" : "Open",
+        "priority" : "High",
+        "created" : "2022-01-01",
+        "updated" : "2022-01-01"
+    },
+    {
+        "id" : "2",
+        "title" : "Bug 2",
+        "description" : "Description 2",
+        "status" : "Closed",
+        "priority" : "Low",
+        "created" : "2022-01-07",
+        "updated" : "2022-01-23"
+    }
+]
