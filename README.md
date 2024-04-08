@@ -1,4 +1,4 @@
-# React + Vite
+# Bug Tracker
 
 A simple bug tracker made with React and Chackra UI 
 Used for development and testing purpose
