@@ -1,7 +1,8 @@
 import React from 'react';
-import { Card, CardBody } from '@chakra-ui/react';
+import { Card, CardBody, Stack } from '@chakra-ui/react';
 import {BugStatus} from './BugStatus';
 import bugs from './bugs.json';
+import { BugPriority } from './BugPriority';
 
 function BugTracker() {
 
@@ -10,7 +11,10 @@ function BugTracker() {
             <CardBody>
                 <h2>{bug.title}</h2>
                 <p>{bug.description}</p>
-                <BugStatus status ={bug.status} />
+                <Stack spacing={4} direction='row' align='center'>
+                    <BugStatus status ={bug.status} />
+                    <BugPriority priority = {bug.priority} />
+                </Stack>
             </CardBody>
         </Card>
     )
