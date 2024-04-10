@@ -1,29 +1,53 @@
 import React from 'react';
-import { Card, CardBody, Stack } from '@chakra-ui/react';
+import { Table, Thead, Tbody, Tr, Th, Td, TableContainer, HStack } from '@chakra-ui/react';
 import {BugStatus} from './BugStatus';
 import bugs from './bugs.json';
+import Users from './Users';
 import { BugPriority } from './BugPriority';
 
 function BugTracker() {
+    
 
-    const buglist = bugs.map(bug => 
-        <Card key={bug.id}>
-            <CardBody>
-                <h2>{bug.title}</h2>
-                <p>{bug.description}</p>
-                <Stack spacing={4} direction='row' align='center'>
-                    <BugStatus status ={bug.status} />
-                    <BugPriority priority = {bug.priority} />
-                </Stack>
-            </CardBody>
-        </Card>
-    )
+    const buglist = () =>{
+        return(
+            <TableContainer >
+                <Table variant='simple'>
+                    <Thead>
+                        <Tr>
+                            <Th>Title</Th>
+                            <Th>Description</Th>
+                            <Th>Status</Th>
+                            <Th>Priority</Th>
+                            <Th >Assignee</Th>
+                            <Th>Create at</Th>
+                            <Th>Updated at</Th>
+                        </Tr>
+                    </Thead>
+                    { bugs.map(bug => (
+                        <Tbody key={bug.id}>
+                            <Tr>
+                                <Td>{bug.title}</Td>
+                                <Td>{bug.description}</Td>
+                                <Td><BugStatus status ={bug.status} /></Td>
+                                <Td><BugPriority priority = {bug.priority} /></Td>
+                                <Td>
+                                    <HStack>
+                                        <Users />
+                                    </HStack>
+                                </Td>
+                                <Td>{bug.created}</Td>
+                                <Td>{bug.updated}</Td>
+                            </Tr>
+                        </Tbody>
+                    ))}
+                </Table>
+            </TableContainer>
+        );
+    };
 
     return (
         <div>
-            <ul>
-                {buglist}
-            </ul>
+            {buglist()}
         </div>
   )
 }

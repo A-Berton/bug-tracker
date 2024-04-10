@@ -5,8 +5,8 @@
         "description" : "Description 1",
         "status" : "Open",
         "priority" : "High",
-        "created" : "2022-01-01",
-        "updated" : "2022-01-01"
+        "created" : "01/01/2022",
+        "updated" : "06/01/2022"
     },
     {
         "id" : "2",
@@ -14,7 +14,43 @@
         "description" : "Description 2",
         "status" : "Closed",
         "priority" : "Low",
-        "created" : "2022-01-07",
-        "updated" : "2022-01-23"
+        "created" : "07/03/2023",
+        "updated" : "23/03/2023"
+    },
+    {
+        "id" : "3",
+        "title" : "Bug 3",
+        "description" : "Description 3",
+        "status" : "Open",
+        "priority" : "High",
+        "created" : "01/01/2022",
+        "updated" : "06/01/2022"
+    },
+    {
+        "id" : "4",
+        "title" : "Bug 4",
+        "description" : "Description 4",
+        "status" : "Closed",
+        "priority" : "Low",
+        "created" : "07/03/2023",
+        "updated" : "23/03/2023"
+    },
+    {
+        "id" : "5",
+        "title" : "Bug 5",
+        "description" : "Description 6",
+        "status" : "Open",
+        "priority" : "High",
+        "created" : "01/01/2022",
+        "updated" : "06/01/2022"
+    },
+    {
+        "id" : "6",
+        "title" : "Bug 6",
+        "description" : "Description 6",
+        "status" : "Closed",
+        "priority" : "Low",
+        "created" : "07/03/2023",
+        "updated" : "23/03/2023"
     }
 ]

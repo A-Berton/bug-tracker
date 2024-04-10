@@ -1,11 +1,16 @@
 import './App.css';
 import BugTracker from './BugTracker';
+import Navbar from './components/Navbar';
+import { Container } from '@chakra-ui/react'
 
 function App() {
+
   return (
     <>
-      <h1>Bug Tracker</h1>
-      <BugTracker />
+      <Navbar />
+      <Container centerContent>
+        <BugTracker />
+      </Container >
     </>
   )
 }
