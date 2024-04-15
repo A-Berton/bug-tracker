@@ -1,10 +1,12 @@
-import React from 'react';
-import { Box, Flex, Heading, Spacer, Button, Modal, useDisclosure } from '@chakra-ui/react';
+import React, { useState } from 'react';
+import { Box, Flex, Heading, Spacer, Button, Modal } from '@chakra-ui/react';
 import Modalform from '../Modalform';
 
 function Navbar() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const finalRef = React.useRef();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
 
   return (
     <nav>
@@ -13,13 +15,15 @@ function Navbar() {
         <Heading size='md'>Bug Tracker</Heading>
       </Box>
         <Spacer />
-        <Button colorScheme='green' onClick={onOpen}>
+        <Button colorScheme = 'green' onClick={handleOpenModal}>
           Add a Bug
         </Button>
-        <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}><Modalform onClose={onClose}/></Modal>
+        <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+          <Modalform onClose={handleCloseModal} />
+        </Modal>
       </Flex>
     </nav>
-  )
+  );
 }
 
 export default Navbar;
