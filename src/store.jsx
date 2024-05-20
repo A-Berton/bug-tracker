@@ -11,14 +11,18 @@ export const GlobalContextProvider = ({children}) => {
         setData([...data, newBug]);
     }
 
-    const value = { data, addBug };
+    const updateBugs = (modifiedData) => {
+        setData(modifiedData);
+    }
+
+    const value = { data, addBug, updateBugs };
 
     return (
         <GlobalContext.Provider value={value}>
             {children}
         </GlobalContext.Provider>
     )
-}
+};
 
 export const useGlobalContext = () => {
     const context = useContext(GlobalContext);

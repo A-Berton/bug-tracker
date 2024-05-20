@@ -1,7 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { Table, Thead, Tbody, Tr, Th, Td, TableContainer, HStack } from '@chakra-ui/react';
 import {BugStatus} from './BugStatus';
-//import bugs from './bugs.json';
 import Users from './Users';
 import { BugPriority } from './BugPriority';
 import { GlobalContext } from './store';
@@ -29,7 +28,7 @@ function BugTracker() {
                             <Th>Status</Th>
                             <Th>Priority</Th>
                             <Th >Assignee</Th>
-                            <Th>Create at</Th>
+                            <Th>Created at</Th>
                             <Th>Updated at</Th>
                         </Tr>
                     </Thead>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Flex, Heading, Spacer, Button, Modal } from '@chakra-ui/react';
-import Modalform from '../Modalform';
+import Modalform from './Modalform';
+import Filter from './Filter';
 
 function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -15,7 +16,8 @@ function Navbar() {
         <Heading size='md'>Bug Tracker</Heading>
       </Box>
         <Spacer />
-        <Button colorScheme = 'green' onClick={handleOpenModal}>
+        <Filter />
+        <Button ml={2} colorScheme = 'green' onClick={handleOpenModal}>
           Add a Bug
         </Button>
         <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
